@@ -11,7 +11,7 @@ if [$shell = NO] || [$shell = no]
   passwd
   echo "This script will use sudo."
   sudo systemctl enable --now inputplumber{,-suspend}
-elif[$shell = YES] || [$shell = yes]
+elif [$shell = YES] || [$shell = yes]
   echo "This script will use sudo."
   sudo systemctl enable --now inputplumber{,-suspend}
 else
@@ -23,7 +23,7 @@ read shell
 if [$shell = NO] || [$shell = no]
   echo "Bye"
   exit
-elif[$shell = YES] || [$shell = yes]
+elif [$shell = YES] || [$shell = yes]
   echo "Enabling SSH"
   sudo systemctl enable --now ssh
   exit
